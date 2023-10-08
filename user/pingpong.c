@@ -20,6 +20,7 @@ int main(int argc, char *argv[]) {
     printf("%d: received %s\n", getpid(), buf);
   } else {
     fprintf(2, "fork error\n");
+    exit(1);
   }
   close(p[0]);
   close(p[1]);
